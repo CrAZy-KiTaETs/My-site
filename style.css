@@ -1,0 +1,844 @@
+body {
+  margin: 0 auto;
+  background-color: lightgray;
+  font-family: arial;
+}
+body.hide {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: inherit;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #07e2ff;
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Главная */
+#header {
+  width: 100%;
+  height: 50px;
+  background-color: #fbfbfb;
+}
+
+#nav {
+  float: left;
+  padding-left: 10px;
+}
+
+#nav a,
+li {
+  margin-right: 30px;
+  text-decoration: none;
+  color: black;
+  list-style-type: none;
+  float: left;
+  transition: 0.3s;
+}
+
+#nav a:hover {
+  border-bottom: 1px solid #07e2ff;
+  color: #07e2ff;
+  transition: 0.3s;
+}
+
+#number {
+  float: right;
+  margin-right: 20px;
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.callme {
+  width: 190px;
+  height: 40px;
+  float: right;
+  background-color: #fbfbfb;
+  margin-top: 8px;
+  border: 1px solid #01baef;
+  color: #01baef;
+  font-size: 14px;
+  transition: 0.8s;
+  margin-right: 10px;
+}
+
+.callme:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px #01baef;
+  transition: 0.3s;
+  padding-bottom: 2px;
+}
+
+#callme-png {
+  width: 38px;
+  padding-top: 10px;
+}
+
+#callme-png-btn {
+  float: right;
+  display: none;
+}
+
+.popup {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.7);
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#popup-container {
+  background-color: white;
+  max-width: 450px;
+  height: 150px;
+  margin: 250px auto 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: inherit;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#closeBtn:active {
+  font-size: 20px;
+}
+
+.callme-in-popup {
+  margin: 20px auto 0;
+  width: 190px;
+  height: 40px;
+  background-color: #fbfbfb;
+  border: 1px solid #01baef;
+  color: #01baef;
+  font-size: 14px;
+  transition: 0.8s;
+  cursor: pointer;
+}
+
+.thx {
+  margin-top: 20px;
+  display: none;
+}
+
+#popup-inp {
+  border: 1px solid #01baef;
+  border-radius: 5px;
+}
+
+#popup-inp:focus {
+  box-shadow: 0px 0px 5px #01baef;
+  outline: none;
+}
+
+#popup-inp::-webkit-outer-spin-button,
+::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.opened {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+/* Моя карточка */
+
+#portfolio {
+  background-color: #fbfbfb;
+  padding-top: 30px;
+  height: 400px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#portfolio .container {
+  margin-top: 60px;
+  position: relative;
+  padding-left: 10px;
+  display: flex;
+}
+
+#portfolio h1 {
+  font-size: 55px;
+  margin: 0;
+}
+
+#portfolio p {
+  color: rgb(190, 190, 190);
+  font-size: 18px;
+  margin: 5px 0 40px 0;
+  max-width: 400px;
+}
+
+#more-info {
+  background-color: #01baef;
+  border: none;
+  width: 220px;
+  height: 60px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+#more-info:hover {
+  box-shadow: 0 0 12px #01baef;
+  transition: 0.4s;
+}
+
+/*Оформление моей карточки изображениями*/
+
+#me {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  transform: rotate(0.5deg);
+  padding-right: 10px;
+}
+
+#me-background {
+  width: 800px;
+  height: 700px;
+  z-index: 0;
+  position: absolute;
+  right: -300px;
+  top: -80px;
+  transform: scale(1, -1);
+}
+
+#background-images img {
+  position: absolute;
+}
+
+#img1 {
+  left: 200px;
+  top: 20px;
+  transform: rotate(18deg);
+  width: 50px;
+}
+
+#img2 {
+  left: 250px;
+  bottom: 20px;
+  width: 60px;
+}
+
+#img3 {
+  left: 680px;
+  top: 40px;
+  width: 55px;
+  transform: rotate(20deg);
+}
+
+#img4 {
+  left: 550px;
+  bottom: 140px;
+  transform: rotate(-13deg);
+  width: 50px;
+}
+
+#img6 {
+  left: 400px;
+  top: 20px;
+  width: 40px;
+  transform: rotate(-18deg);
+}
+
+@media (max-width: 1300px) {
+  #img1 {
+    left: 0;
+  }
+  #img2 {
+    left: 100px;
+  }
+  #img3 {
+    left: 390px;
+    top: 100px;
+  }
+  #img4 {
+    left: 270px;
+  }
+  #img6 {
+    left: 222px;
+  }
+}
+/* Что я делаю */
+
+#what-i-can {
+  height: 500px;
+  background-color: white;
+  z-index: 0;
+  position: relative;
+}
+
+#what-i-can .container {
+  display: flex;
+  flex-direction: column;
+}
+
+#what-i-can h2 {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-size: 40px;
+}
+
+#what-i-can form {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-possibilities {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.possibilities {
+  width: 250px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.possibilities p {
+  padding: 0 10px;
+  color: rgb(190, 190, 190);
+  text-align: center;
+  font-size: 18px;
+}
+
+.possibilities img {
+  width: 90px;
+}
+
+.price {
+  background-color: #01baef;
+  border: none;
+  width: 220px;
+  height: 60px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.price:hover {
+  box-shadow: 0 0 12px #01baef;
+  transition: 0.4s;
+}
+/* Работы */ /* Работы */ /* Работы */ /* Работы */ /* Работы */ /* Работы */ /* Работы */ /* Работы */
+#my-works {
+  background-color: #fbfbfb;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#my-works a {
+  text-decoration: none;
+}
+
+#my-works p {
+  color: rgb(190, 190, 190);
+}
+
+#my-works .container {
+  width: 99%;
+}
+
+.examples-of-works {
+  position: relative;
+  border: 1px;
+}
+
+.works {
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  height: 320px;
+}
+
+.works img {
+  transition: 0.8s;
+  width: 100%;
+  border: 1px solid rgb(236, 236, 236);
+  border-radius: 10px;
+  height: 240px;
+}
+
+.works img:hover {
+  transition: 0.3s;
+  box-shadow: 0 0 10px #01baef;
+  width: 101%;
+  height: 242px;
+}
+
+#my-works h2 {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-size: 40px;
+}
+
+#price-cpntainer {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* котакпас */
+.slick-track {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  margin: 0;
+}
+
+.slick-list {
+  overflow-x: hidden;
+}
+.slick-arrow {
+  width: 62px;
+  height: 60px;
+  position: absolute;
+  z-index: 5;
+  border: none;
+  background-color: #00000000;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.slick-arrow.slick-prev {
+  left: 0;
+  top: 35%;
+  background-image: url(/images/arrow.png);
+  box-shadow: 0 0 10px rgb(236, 236, 236);
+  border-radius: 50%;
+}
+.slick-arrow.slick-next {
+  right: 0;
+  top: 35%;
+  background-image: url(/images/arrow.png);
+  transform: rotate(180deg);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgb(236, 236, 236);
+}
+
+.examples-of-works .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.examples-of-works .slick-dots li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.examples-of-works .slick-dots button {
+  font-size: 0;
+  border-radius: 50%;
+  width: 10px;
+  height: 12px;
+  border: none;
+  background-color: rgb(236, 236, 236);
+}
+
+.examples-of-works .slick-dots li.slick-active button {
+  background-color: #01baef;
+}
+
+/* Реклама */
+
+#my-ad {
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient(45deg, #01baef, #07e2ff);
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#my-ad .container {
+  max-width: 1000px;
+  padding-left: 10px;
+}
+
+#my-ad h2 {
+  margin: 0;
+  font-size: 36px;
+}
+/* Футер */
+footer {
+  height: 350px;
+  background-color: white;
+}
+
+footer .container {
+  padding: 0 10px;
+}
+
+#my-contacts {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ww {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  text-align: left;
+}
+
+.ww a {
+  text-decoration: none;
+  color: rgb(190, 190, 190);
+}
+
+#fat-text img {
+  width: 22px;
+}
+
+.ww img {
+  width: 40px;
+  padding-right: 20px;
+}
+
+#fat-text {
+  font-size: 20px;
+}
+
+#my-contacts {
+  width: 100%;
+  height: 300px;
+}
+
+#social-media {
+  margin-top: 15px;
+  display: flex;
+
+  align-items: center;
+}
+
+#water-mark {
+  width: 100%;
+  height: 50px;
+  background-color: #003d52;
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+}
+
+/* Анимация при нажатии на бургер */
+
+@media (max-width: 1024px) {
+  .burger {
+    padding-top: 3px;
+    width: 35px;
+    height: 15px;
+    margin-top: 10px;
+    position: relative;
+    padding-top: 15px;
+    margin-left: 10px;
+  }
+  .burger:before,
+  .burger:after {
+    width: 100%;
+    content: "";
+    position: absolute;
+    background-color: #01baef;
+    height: 4px;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+
+  .burger span {
+    width: 100%;
+    height: 4px;
+    background-color: #01baef;
+    position: absolute;
+    transition: 1s;
+    border-radius: 5px;
+  }
+
+  .burger:before {
+    top: 5px;
+  }
+  .burger:after {
+    bottom: 0;
+  }
+
+  #nav {
+    padding-left: 0;
+  }
+  #nav ul {
+    position: absolute;
+    z-index: 20;
+    margin-top: 50px;
+    background-color: #fbfbfb;
+    width: 170px;
+    height: 200px;
+    width: 200px;
+    box-shadow: 4px 4px 10px;
+    transition: 0.6s;
+    opacity: 0;
+  }
+  #nav li {
+    padding: 30px 0;
+    display: block;
+    float: none;
+  }
+
+  /* Нажатый бургер*/
+  .burger.active:before {
+    transform: rotate(45deg);
+    top: 15px;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+
+  .burger.active span {
+    opacity: 0;
+    transition: 0.1s;
+    border-radius: 5px;
+  }
+
+  .burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 10px;
+    transition: 0.3s;
+  }
+  #nav.active ul {
+    opacity: 1;
+    transition: 0.3s;
+    display: block;
+  }
+  body.active {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .slick-arrow {
+    display: none;
+  }
+  #callme {
+    display: none;
+  }
+  #callme-png {
+    display: block;
+    padding-right: 10px;
+  }
+  #callme-png-btn {
+    display: block;
+    padding-right: 10px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+  }
+  #portfolio {
+    height: 500px;
+  }
+  #portfolio .container {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    padding: 0;
+    height: 500px;
+  }
+  #aboutme {
+    background-color: white;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  #what-i-can {
+    height: 550px;
+  }
+
+  #what-i-can .container {
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-end;
+  }
+
+  .my-possibilities {
+    flex-wrap: wrap;
+    height: 350px;
+    justify-content: space-evenly;
+  }
+
+  .possibilities {
+    width: 260px;
+  }
+
+  #me {
+    width: 330px;
+    position: sticky;
+    bottom: 20px;
+    transform: rotate(0.5deg);
+    padding-right: 0px;
+  }
+  #me-background {
+    width: 600px;
+    height: 500px;
+    padding-bottom: 20px;
+    position: static;
+  }
+
+  #xyu {
+    width: 100%;
+    height: 300px;
+    z-index: 5;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  #kot {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    top: 190px;
+  }
+  #portfolio {
+    padding-top: 0px;
+    position: static;
+  }
+
+  #portfolio .container {
+    margin-top: 0px;
+    position: static;
+  }
+  #img1 {
+    display: none;
+  }
+  #img2 {
+    display: none;
+  }
+  #img3 {
+    display: none;
+  }
+  #img4 {
+    display: none;
+  }
+  #img6 {
+    display: none;
+  }
+}
+
+@media (max-width: 527px) {
+  #what-i-can {
+    height: 1090px;
+  }
+  .my-possibilities {
+    height: 850px;
+  }
+  .possibilities p {
+    font-size: medium;
+  }
+
+  .price {
+    font-size: medium;
+  }
+  #number {
+    font-size: 20px;
+  }
+
+  #aboutme h1 {
+    font-size: 36px;
+  }
+
+  #aboutme p {
+    font-size: medium;
+  }
+
+  #more-info {
+    width: 200px;
+    height: 50px;
+    font-size: medium;
+  }
+
+  #me {
+    width: 300px;
+  }
+
+  #what-i-can h2 {
+    font-size: 36px;
+  }
+  #my-ad h2 {
+    font-size: 24px;
+  }
+  #my-ad {
+    font-size: 14px;
+  }
+  #my-works h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+  #my-works {
+    font-size: medium;
+  }
+
+  #my-contacts {
+    flex-direction: column;
+  }
+  #social-media {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  #social-media.callme {
+    display: block;
+  }
+  #fat-text {
+    font-size: medium;
+  }
+}

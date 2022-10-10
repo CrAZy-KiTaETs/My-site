@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <script src="jquery.js"></script>
+    <script src="slick.min.js"></script>
+    <script src="JS.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About me</title>
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <nav id="nav">
+          <ul>
+            <li><a href="#what-i-can">Услуги</a></li>
+            <li><a href="#my-works">Портфолио</a></li>
+            <li><a href="#my-ad">Стоимость</a></li>
+          </ul>
+          <div class="burger">
+            <span></span>
+          </div>
+        </nav>
+        <form action="#">
+          <button class="callme" id="callme">Заказать звонок</button>
+          <button id="callme-png-btn">
+            <img src="/images/call.png" id="callme-png" />
+          </button>
+        </form>
+        <div id="number">+7 (707) 328-40-47</div>
+      </div>
+    </header>
+    <div id="portfolio">
+      <div class="container">
+        <div id="aboutme">
+          <h1>Косаев Алим</h1>
+          <p>Frontend-разработчик и верстальщик сатов</p>
+          <form action="#">
+            <button id="more-info">Узнать больше</button>
+          </form>
+        </div>
+        <div id="xyu">
+          <div id="kot"><img src="images/me2.png" id="me" /></div>
+          <img src="images/Shape.png" id="me-background" />
+        </div>
+      </div>
+      <div id="background-images">
+        <img src="/images/dop1.png" id="img1" />
+        <img src="/images/dop2.png" id="img2" />
+        <img src="/images/dop1.png" id="img3" />
+        <img src="/images/dop4.png" id="img4" />
+        <img src="/images/dop6.png" id="img6" />
+      </div>
+    </div>
+    <div id="what-i-can">
+      <div class="container">
+        <h2>Что я делаю</h2>
+        <div class="my-possibilities">
+          <div class="possibilities">
+            <img src="images/coding (1).png" />
+            <p>Верстка лэндинг-страниц и сайтов любой сложности</p>
+          </div>
+          <div class="possibilities">
+            <img src="images/code (2).png" />
+            <p>Адаптивная вёрстка под все браузеры и устройства</p>
+          </div>
+          <div class="possibilities">
+            <img src="images/code 3.png" />
+            <p>Frontend-разработка и программирование</p>
+          </div>
+          <div class="possibilities">
+            <img src="images/cod 4.png" />
+            <p>Исправление и доработка существующей вёрстки</p>
+          </div>
+        </div>
+        <form action="#my-ad">
+          <button class="price">Узнать стоимость</button>
+        </form>
+      </div>
+    </div>
+    <div id="my-works">
+      <div class="container">
+        <h2>Примеры моих работ</h2>
+        <div class="examples-of-works">
+          <div class="works">
+            <a href="https://crazy-kitaets.github.io/" target="_blank"
+              ><img src="images/to-do.png" />
+              <p>Список дел</p>
+            </a>
+          </div>
+          <div class="works">
+            <a href="#" target="_blank">
+              <img src="images/news.png" />
+              <p>Новостной сайт</p>
+            </a>
+          </div>
+          <div class="works">
+            <a href="#" target="_blank"
+              ><img src="images/first.png" />
+              <p>Мой первый сайт</p>
+            </a>
+          </div>
+          <div class="works">
+            <a href="#" target="_blank">
+              <img src="images/news.png" />
+              <p>Новостной сайт</p>
+            </a>
+          </div>
+        </div>
+        <div id="price-cpntainer">
+          <button class="price callme">Заказать проект</button>
+        </div>
+      </div>
+    </div>
+    <div id="my-ad">
+      <div class="container">
+        <h2>
+          Адаптивная верстка под все браузеры и устройства от 5000 тг всего за 6
+          часов
+        </h2>
+        <p>
+          * &nbsp;стоимость и время выполнения заказа могут отличаться от
+          заявленных, и расчитываются индивидуально в зависимости от&nbsp;
+          &nbsp;&nbsp;&nbsp;сложности
+        </p>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div id="my-contacts">
+          <div class="ww">
+            <a href="#">Услуги</a>
+            <a href="#">Портфолио</a>
+            <a href="#">Стоимость </a>
+          </div>
+          <div class="ww" id="fat-text">
+            <div><img src="images/phone-call.png" /> +7 (707) 328-40-47</div>
+            <div><img src="images/email.png" />Kosaev.alim@mail.ru</div>
+          </div>
+          <div class="ww" id="social-media">
+            <button class="callme">Заказать звонок</button>
+            <div>
+              <a href="#"><img src="images/whatsapp.png" /></a>
+              <a href="#"><img src="images/instagram.png" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="water-mark">© Косаев Алим, 2022</div>
+    </footer>
+    <div class="popup">
+      <div id="popup-container">
+        <button id="closeBtn">X</button>
+        <p>Введте ваш номер чтобы вам перезвонли</p>
+        <input type="number" id="popup-inp" />
+        <button class="callme-in-popup">Заказать звонок</button>
+        <span class="thx">Спасибо, скоро с вами свяжутся</span>
+      </div>
+    </div>
+  </body>
+</html>
