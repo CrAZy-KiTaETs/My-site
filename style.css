@@ -447,14 +447,14 @@ li {
 .slick-arrow.slick-prev {
   left: 0;
   top: 35%;
-  background-image: url(/images/arrow.png);
+  background-image: url(images/arrow.png);
   box-shadow: 0 0 10px rgb(236, 236, 236);
   border-radius: 50%;
 }
 .slick-arrow.slick-next {
   right: 0;
   top: 35%;
-  background-image: url(/images/arrow.png);
+  background-image: url(images/arrow.png);
   transform: rotate(180deg);
   border-radius: 50%;
   box-shadow: 0 0 10px rgb(236, 236, 236);
